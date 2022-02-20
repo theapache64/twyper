@@ -1,4 +1,4 @@
-package com.github.theapache64.twyper
+package com.github.theapache64.twypersample
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

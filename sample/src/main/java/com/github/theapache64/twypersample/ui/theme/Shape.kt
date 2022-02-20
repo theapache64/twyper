@@ -1,4 +1,4 @@
-package com.github.theapache64.twyper.ui.theme
+package com.github.theapache64.twypersample.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

@@ -1,4 +1,4 @@
-package com.github.theapache64.twyper.ui.theme
+package com.github.theapache64.twypersample.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

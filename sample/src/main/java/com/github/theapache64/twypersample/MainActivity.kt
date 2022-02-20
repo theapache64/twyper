@@ -1,4 +1,4 @@
-package com.github.theapache64.twyper
+package com.github.theapache64.twypersample
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import com.github.theapache64.twyper.ui.theme.TwyperTheme
+import com.github.theapache64.twypersample.ui.theme.TwyperTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
