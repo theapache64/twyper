@@ -12,6 +12,7 @@
 
 ### ✨ Demo
 
+https://user-images.githubusercontent.com/9678279/154856283-c38be412-387c-4b25-a612-01fea39829f1.mov
 
 ## ⌨️ Usage
 
