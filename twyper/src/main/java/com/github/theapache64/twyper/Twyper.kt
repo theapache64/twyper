@@ -22,12 +22,13 @@ inline fun <reified T> Twyper(
     onItemRemoved: (T, SwipedOutDirection) -> Unit,
     onEmpty: () -> Unit = {},
     twyperController: TwyperController = rememberTwyperController(),
+    stackCount: Int = 2,
+    paddingBetweenCards: Float = 40f,
     modifier: Modifier = Modifier,
     crossinline renderItem: @Composable (T) -> Unit
 ) {
     Box(modifier = modifier) {
-        // Rendering only the first 2 items at a time
-        val list = items.take(2).reversed()
+        val list = items.take(stackCount).reversed()
         list.forEachIndexed { index, item ->
             key(item) {
                 val cardController = rememberCardController()
@@ -35,7 +36,7 @@ inline fun <reified T> Twyper(
                     twyperController.currentCardController = cardController
                 }
                 if (!cardController.isCardOut()) {
-                    val paddingTop by animateFloatAsState(targetValue = (index * 40f))
+                    val paddingTop by animateFloatAsState(targetValue = (index * paddingBetweenCards))
                     Card(
                         modifier = Modifier
                             .pointerInput(Unit) {
