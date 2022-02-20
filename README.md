@@ -43,7 +43,7 @@ Twyper(
         println("Item removed: $item -> $direction")
         items.remove(item)
     },
-    onEmpty = { // invoked when all stack is empty
+    onEmpty = { // invoked when the stack is empty
         println("End reached")
     }
 ) { item ->
