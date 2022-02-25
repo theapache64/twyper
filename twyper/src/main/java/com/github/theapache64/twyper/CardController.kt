@@ -3,9 +3,7 @@ package com.github.theapache64.twyper
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.AnimationVector1D
 import androidx.compose.animation.core.tween
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.*
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
@@ -48,7 +46,7 @@ fun rememberCardController(): CardController {
     }
 }
 
-class CardControllerImpl(
+open class CardControllerImpl(
     private val swipeX: Animatable<Float, AnimationVector1D>,
     private val swipeY: Animatable<Float, AnimationVector1D>,
     private val scope: CoroutineScope,
