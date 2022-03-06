@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.graphics.Color
+import com.github.theapache64.twyper.Generator.randomColor
 
 private val rgbRange = 0..255
 
@@ -18,7 +19,13 @@ fun rememberRandomColor(): Color {
             restore = { colorLong -> Color(colorLong.toULong()) }
         )
     ) {
-        Color(
+       randomColor()
+    }
+}
+
+object Generator{
+    fun randomColor(): Color {
+        return Color(
             red = rgbRange.random(),
             green = rgbRange.random(),
             blue = rgbRange.random(),
