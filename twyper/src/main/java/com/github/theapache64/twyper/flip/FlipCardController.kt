@@ -1,4 +1,4 @@
-package com.github.theapache64.twyper
+package com.github.theapache64.twyper.flip
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.AnimationVector1D
@@ -9,6 +9,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import com.github.theapache64.twyper.CardController
+import com.github.theapache64.twyper.CardControllerImpl
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -22,7 +24,7 @@ interface FlipCardController: CardController {
     val cardBackAlpha: Float
     var state: FlipState
 
-    fun isCardRotated(): Boolean
+    fun isCardFlipped(): Boolean
     fun setCardFlipState()
     fun flipToFront()
     fun flipToBack()
@@ -74,12 +76,12 @@ class FlipCardControllerImpl(
 
     override var state: FlipState = cardState
 
-    override fun isCardRotated(): Boolean {
+    override fun isCardFlipped(): Boolean {
         return cardState == FlipState.BACK
     }
 
     override fun setCardFlipState() {
-        if(!isCardRotated()){
+        if(!isCardFlipped()){
             flipToBack()
         }else{
             flipToFront()

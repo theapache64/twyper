@@ -15,6 +15,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.github.theapache64.twyper.Generator.randomColor
+import com.github.theapache64.twyper.flip.TwyperFlip
+import com.github.theapache64.twyper.flip.rememberTwyperFlipController
 
 @Preview
 @Composable

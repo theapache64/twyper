@@ -1,4 +1,4 @@
-package com.github.theapache64.twyper
+package com.github.theapache64.twyper.flip
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.consumePositionChange
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.zIndex
+import com.github.theapache64.twyper.SwipedOutDirection
 
 enum class FlipState {
     FRONT, BACK

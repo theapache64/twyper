@@ -1,4 +1,4 @@
-package com.github.theapache64.twyper
+package com.github.theapache64.twyper.flip
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
