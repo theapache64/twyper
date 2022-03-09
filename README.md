@@ -53,11 +53,51 @@ Twyper(
 ```
 - See full source code [here](https://github.com/theapache64/twyper/blob/b4c21e76928ed888c9c1230ca9e3ac4711d8cf5a/sample/src/main/java/com/github/theapache64/twyper/TwyperPreview.kt#L20)
 
+### 3. Use `TwyperFlip` composable
+```kotlin
+val items = remember { mutableStateListOf(*('A'..'Z').toList().toTypedArray()) }
+
+//  twyperFlipController to swipe cards programmatically
+val twyperFlipController = rememberTwyperFlipController()
+
+val generateBoxModifier: () -> Modifier = {
+    //return Modifier for the card
+}
+
+TwyperFlip(
+    items = items,
+    twyperFlipController = twyperFlipController,
+    onItemRemoved = { item, direction ->
+        println("Item removed: $item -> $direction")
+        items.remove(item)
+    },
+    cardModifier = generateBoxModifier,
+    onEmpty = {  
+        println("End reached")
+    },
+    front = { item ->
+        // card content goes here
+    },
+    back = { item ->
+       // card content when flipped goes here
+    })
+```
+- See full source code [here](https://github.com/yash-k9/twyper/blob/master/sample/src/main/java/com/github/theapache64/twyper/TwyperFlipPreview.kt)
+
 ## 🧪 More Samples
 
 - [Swipe Search](https://github.com/theapache64/swipe-search)
 
 https://user-images.githubusercontent.com/9678279/154852171-184ff026-f2e4-4ff7-9782-4ab3d9947bf7.mov
+
+- [Swipe Search Flip](https://github.com/theapache64/swipe-search)
+
+https://user-images.githubusercontent.com/59912430/157506600-6fc784c7-e7f5-40ae-b6fe-d369876e7908.mp4
+
+- [TwyperFlip Demo](https://github.com/yash-k9/twyper/blob/master/sample/src/main/java/com/github/theapache64/twyper/TwyperFlipPreview.kt)
+
+https://user-images.githubusercontent.com/59912430/157507083-77e646d6-e735-4227-abb6-f13c56e217dc.mp4
+
 
 ## ✍️ Author
 
